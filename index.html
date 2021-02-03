@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+<div class="conteiner">
+    <h2 class="tittle">Login To Your Account / Register New</h2>
+    <div class="reg_block d-flex flex-column">
+        <div class="header d-flex">
+            <div class="logo p-relative">
+                <div class="fas fa-edit p-absolute"></div>
+            </div>
+            <h2 class="header_tittle">Login To Your Account / Register New</h2>
+        </div>
+        <div class="main_content d-flex">
+            <div class="login_block w-50">
+                <div class="circle_slash p-relative">/</div>
+                <form method="post" class="logForm" onsubmit="return loginValidate();" id="login_form"
+                      action="handler.php">
+                    <input required placeholder="User Name" class="login_input" id="login_name" type="text"
+                           name="User_name">
+                    <input required placeholder="Password" maxlength="8" minlength="4" class="login_input"
+                           id="login_pass" type="password" name="Pass">
+                </form>
+                <div class="check_row d-flex">
+
+                    <div class="check_area p-relative">
+                        <div class="description">You no longer need to enter
+                            a password every time you use the site
+                        </div>
+                        <input class="remember_check" type="checkbox" id="remember">
+                        <label for="remember" class="check_text">Remember My Password</label>
+                    </div>
+                    <button form="login_form" type="submit" class="login_btn">Login</button>
+                </div>
+            </div>
+            <div class="register_block w-50 d-flex flex-column">
+                <h2 class="reg_tittle">Register</h2>
+                <form method="post" id="reg_form" action="handler.php" class="regForm">
+                    <span class="tittle_input">Email</span>
+                    <input required class="reg_input" name="email" type="email">
+                    <span class="tittle_input">User Name</span>
+                    <input required class="reg_input" type="text" name="User_name">
+                    <span class="tittle_input">Password</span>
+                    <input required class="reg_input" maxlength="8" minlength="4" type="password" name="Pass">
+                </form>
+                <button form="reg_form" name="enter" class="reg_btn">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/c686eb15da.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
